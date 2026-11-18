@@ -9,5 +9,6 @@ Statische site van Funderingscijfer.nl (GitHub Pages, geen build-step).
 | `oproep.html` | Oproep aan de overheid |
 | `opinie.html` | Opiniestuk funderingsrisico 2026 |
 | `nvm-standpunt.html` | Brief NVM Wonen, 16 april 2026 |
+| `404.html` | Kopie van `index.html`: vangt deeplinks als `/1815JV/32/A` op (bij wijziging van index.html opnieuw kopiëren) |
 
 De navigatie staat in elk bestand tussen `<!-- fc-nav -->` en `<!-- /fc-nav -->`.
