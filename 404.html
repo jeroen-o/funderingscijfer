@@ -14,15 +14,15 @@
 body{font-family:'Outfit',sans-serif;background:var(--sand);color:var(--ink);font-size:15px;line-height:1.6;overflow-x:hidden}
 .hero{background:var(--hb);padding:0 24px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(229,161,56,.13),transparent 70%);pointer-events:none}
-.hero-in{max-width:720px;margin:0 auto;padding:40px 0 38px;position:relative;z-index:1}
+.hero-in{max-width:900px;margin:0 auto;padding:40px 20px 38px;position:relative;z-index:1}
 .brand{display:flex;align-items:baseline;margin-bottom:5px}
 .bn{font-family:'Fraunces',serif;font-size:27px;font-weight:900;color:#fff;letter-spacing:-.02em}
 .bd{font-family:'Fraunces',serif;font-size:27px;font-weight:900;color:var(--amber)}
 .bt{font-family:'Fraunces',serif;font-size:27px;font-weight:300;color:rgba(255,255,255,.45)}
 .hsub{font-size:13px;color:rgba(255,255,255,.42);margin-bottom:22px;font-weight:300}
 .hero h2{font-family:'Fraunces',serif;font-size:clamp(21px,4vw,30px);font-weight:700;color:#fff;line-height:1.25;margin-bottom:10px;letter-spacing:-.02em}
-.hero p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;max-width:530px;font-weight:300}
-.sw{max-width:720px;margin:0 auto;padding:0 20px}
+.hero p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;max-width:640px;font-weight:300}
+.sw{max-width:940px;margin:0 auto;padding:0 20px}
 .sc{background:var(--white);border-radius:16px;box-shadow:var(--sh);transform:translateY(-26px)}
 .sci{padding:26px}
 .sclbl{font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
@@ -32,12 +32,12 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);color:var(--ink);fon
 .fld input,.fld select{padding:13px 15px;font-family:'Outfit',sans-serif;font-size:15px;color:var(--ink);border:2px solid var(--border);border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s;background:var(--sand)}
 .fld input:focus,.fld select:focus{border-color:var(--hb);background:#fff;box-shadow:0 0 0 3px rgba(0,48,87,.09)}
 .fld input::placeholder{color:#B0BAC8}
-.fpc{flex:0 0 148px}.fhn{flex:0 0 108px}.ftoe{flex:0 0 88px}
+.fpc{flex:1.3 1 150px;min-width:0}.fhn{flex:1 1 110px;min-width:0}.ftoe{flex:.8 1 90px;min-width:0}.ir .fld input{width:100%;min-width:0}.ir .go{flex:0 0 auto}
 .go{padding:13px 26px;background:var(--amber);color:var(--hb);border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background .18s;white-space:nowrap;height:50px;align-self:flex-end}
 .go:hover{background:var(--amber2)}.go:disabled{background:#C5D0DA;color:#7A8F9E;cursor:not-allowed}
 .schint{font-size:12px;color:var(--muted);margin-top:10px}
 .err{margin-top:12px;padding:11px 14px;background:var(--red-lt);border-radius:8px;font-size:13px;color:var(--red);border-left:3px solid var(--red);display:none}
-.main{max-width:720px;margin:0 auto;padding:0 20px 60px}
+.main{max-width:940px;margin:0 auto;padding:0 20px 60px}
 .lcard{background:var(--white);border-radius:16px;box-shadow:var(--sh);padding:44px 26px;text-align:center;display:none}
 .spin{width:46px;height:46px;border:3px solid var(--border);border-top-color:var(--amber);border-radius:50%;animation:sp .8s linear infinite;margin:0 auto 18px}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -168,7 +168,7 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);color:var(--ink);fon
   @page{margin:14mm}
 }
 @media(max-width:560px){
-  .fpc{flex:1 1 100%}.fhn,.ftoe{flex:1 1 calc(50% - 5px)}.go{flex:1 1 100%}
+  .fpc{flex:1 1 100%}.fhn,.ftoe{flex:1 1 calc(50% - 5px)}.go,.ir .go{flex:1 1 100%}
   .hero-in{padding:26px 0 22px}.sci{padding:20px}.sh{padding:20px}
   .shtop{flex-direction:column;gap:16px;align-items:flex-start}
   .sbar{gap:2px}.sbi{font-size:12px;padding:6px 2px}
@@ -757,7 +757,7 @@ function toonResultaat(R){
   // RVO blok
   let rvoHTML='';
   if(rvo&&rvo.gevonden){
-    const pct=rvo.pctVoor1970!=null?String(rvo.pctVoor1970).replace('.',',') :null;
+    const pct=rvo.pctVoor1970!=null&&!isNaN(parseFloat(rvo.pctVoor1970))?parseFloat(rvo.pctVoor1970).toLocaleString('nl-NL',{maximumFractionDigits:1}):null;
     rvoHTML='<div class="rvo rvo-ja"><div class="rvot" style="color:#B87820">&#9888;&#65039; Ligt in een indicatief aandachtsgebied</div>'
       +'<div class="rvod">De RVO Funderingsviewer merkt dit postcodegebied aan als aandachtsgebied: er staan relatief veel panden van voor 1970 op een minder draagkrachtige bodem. De kaart doet geen uitspraak over de staat van deze specifieke woning.</div>'
       +'<div class="rvostat">'
@@ -960,7 +960,7 @@ function rapportTekst(){
   L.push('Bodemtype:      '+bNaam+(bodem&&bodem.geschat?' (regionale schatting)':''));
   L.push('RVO aandachtsgebied: '+(rvo&&rvo.gevonden?'JA':'Nee'));
   if(rvo&&rvo.gevonden){
-    if(rvo.pctVoor1970)L.push('  Panden voor 1970: '+rvo.pctVoor1970+'%');
+    if(rvo.pctVoor1970)L.push('  Panden voor 1970: '+(isNaN(parseFloat(rvo.pctVoor1970))?rvo.pctVoor1970:parseFloat(rvo.pctVoor1970).toLocaleString('nl-NL',{maximumFractionDigits:1}))+'%');
     if(rvo.bodemgesteldheid)L.push('  Bodemgesteldheid: '+rvo.bodemgesteldheid);
   }
   L.push('');
