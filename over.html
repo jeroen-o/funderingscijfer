@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Over Funderingscijfer.nl - voor de hypotheekadviseur</title>
+<meta name="description" content="Waarom en hoe hypotheekadviseurs het Funderingscijfer inzetten in het oriëntatiegesprek.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--hb:#003057;--ink:#0A1628;--ink3:#2E4A72;--amber:#E5A138;--sand:#F4F7F9;--white:#fff;--muted:#5B6E88;--border:#DDE4EE;--sh:0 2px 20px rgba(10,22,40,.08),0 0 0 1px rgba(10,22,40,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:var(--sand);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+.hero{background:var(--hb);padding:0 16px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(229,161,56,.13),transparent 70%);pointer-events:none}
+.hero-in{max-width:760px;margin:0 auto;padding:44px 0 64px;position:relative}
+.kicker{display:inline-block;background:var(--amber);color:var(--hb);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;letter-spacing:-.02em}
+.hero p{margin-top:12px;font-size:16px;color:rgba(255,255,255,.65);font-weight:300;max-width:600px}
+.wrap{max-width:760px;margin:-36px auto 0;padding:0 16px 60px;position:relative}
+.doc{background:var(--white);border-radius:16px;box-shadow:var(--sh);padding:40px 44px}
+.doc h2{font-family:'Fraunces',serif;font-size:24px;font-weight:700;color:var(--hb);line-height:1.3;margin:36px 0 12px;letter-spacing:-.01em}
+.doc h2:first-child{margin-top:0}
+.doc h3{font-size:14px;font-weight:700;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;margin:24px 0 8px}
+.doc p{margin-bottom:14px}
+.doc ul,.doc ol{margin:0 0 16px 22px}
+.doc li{margin-bottom:8px;padding-left:4px}
+.doc li::marker{color:var(--amber);font-weight:700}
+.doc strong{color:var(--hb)}
+.doc a{color:var(--hb);font-weight:600;text-decoration-color:var(--amber);text-underline-offset:3px}
+.lead{font-size:18px;color:var(--ink3)}
+.callout{background:#FFF7E8;border-left:4px solid var(--amber);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+.callout p:last-child{margin-bottom:0}
+.quote{font-family:'Fraunces',serif;font-size:21px;font-weight:700;color:var(--hb);line-height:1.4;border-left:4px solid var(--amber);padding:4px 0 4px 20px;margin:24px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 20px}
+.two>div{background:var(--sand);border-radius:12px;padding:18px 20px}
+.two h3{margin-top:0}
+.two p:last-child{margin-bottom:0}
+.sig{margin-top:32px;padding-top:20px;border-top:1px solid var(--border)}
+.cta{display:inline-block;margin-top:8px;background:var(--amber);color:var(--hb)!important;text-decoration:none!important;padding:12px 22px;border-radius:10px;font-weight:700}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;font-size:14px;margin-bottom:24px;color:var(--muted)}
+.meta dt{font-weight:600}.meta dd{color:var(--ink)}
+.addr{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.src{font-size:13px;color:var(--muted);margin-top:28px;padding-top:16px;border-top:1px solid var(--border)}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:0 16px 40px}
+@media(max-width:640px){.doc{padding:26px 20px}.two{grid-template-columns:1fr}.quote{font-size:18px}}
+@media print{.hero{background:none}.hero h1,.hero p{color:#000}.wrap{margin-top:0}.doc{box-shadow:none;padding:0}}
+</style>
+</head>
+<body>
+<!-- fc-nav -->
+<style>
+.fcnav{background:#00243f;font-family:'Outfit','Segoe UI',Arial,sans-serif;position:relative;z-index:50}
+.fcnav-in{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap}
+.fcnav-brand{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:18px;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-right:auto}
+.fcnav-brand span{color:#E5A138}
+.fcnav-links{display:flex;flex-wrap:wrap;gap:2px 4px;list-style:none;margin:0;padding:0}
+.fcnav-links a{display:block;padding:6px 9px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none}
+.fcnav-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+.fcnav-links a[aria-current=page]{color:#E5A138}
+.fcnav-links .ext a{color:rgba(255,255,255,.45)}
+.fcnav-links .sep{width:1px;background:rgba(255,255,255,.15);margin:4px 6px}
+@media(max-width:640px){.fcnav-brand{width:100%}.fcnav-links .sep{display:none}}
+@media print{.fcnav{display:none}}
+</style>
+<nav class="fcnav" aria-label="Hoofdmenu"><div class="fcnav-in">
+<a class="fcnav-brand" href="index.html">Funderingscijfer<span>.</span>nl</a>
+<ul class="fcnav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="over.html" aria-current="page">Over</a></li>
+<li><a href="oproep.html">Oproep</a></li>
+<li><a href="opinie.html">Opinie</a></li>
+<li><a href="nvm-standpunt.html">NVM standpunt</a></li>
+<li class="sep" aria-hidden="true"></li>
+<li class="ext"><a href="https://www.woningcijfer.nl" target="_blank" rel="noopener">Woningcijfer</a></li>
+<li class="ext"><a href="https://www.klimaatcijfer.nl" target="_blank" rel="noopener">Klimaatcijfer</a></li>
+<li class="ext"><a href="https://www.pensioencijfer.nl" target="_blank" rel="noopener">Pensioencijfer</a></li>
+<li class="ext"><a href="https://www.hypotheekcijfer.nl" target="_blank" rel="noopener">Hypotheekcijfer</a></li>
+</ul></div></nav>
+<!-- /fc-nav -->
+<header class="hero"><div class="hero-in">
+<span class="kicker">Over</span>
+<h1>Funderingscijfer voor de hypotheekadviseur</h1>
+<p>Het risicogesprek naar voren halen: vóórdat de koopakte wordt getekend, niet erna.</p>
+</div></header>
+<main class="wrap"><article class="doc">
+
+<h2>Het probleem dat sinds 1 april 2026 op je bordje ligt</h2>
+<p>Funderingsrisico staat sinds 1 april 2026 verplicht in elk taxatierapport onder NRVT/NWWI-kader, met een score A t/m E. Klinkt overzichtelijk, maar de pijn zit in de timing: dat rapport komt pas ná het tekenen van het koopcontract op tafel. Tussen de handtekening op de koopakte en de uitkomst van de taxatie zit dus een gat waarin de klant juridisch al vastzit aan de koop, terwijl jij nog niet weet of de bank het hele bedrag wil financieren.</p>
+<p>Bij een score D of E wordt aanvullend onderzoek (QuickScan of vol funderingsonderzoek) verwacht. Funderingsherstel kost al snel € 60.000 – € 100.000. Reken zelf even uit wat dat doet met de financierbaarheid als de koopprijs daar geen rekening mee houdt.</p>
+
+<h2>Wat Funderingscijfer voor jou doet</h2>
+<p class="lead">In de kern: het trekt het risicogesprek naar voren — vóórdat de koopakte wordt getekend, niet erna.</p>
+<p>Je voert postcode + huisnummer in, krijgt binnen seconden een score 1–10 met de vertaling naar het verwachte KCAF-label A–E, op basis van publieke databronnen (PDOK, BAG-bouwjaar, BRO-bodemkaart, AHN4-maaiveldhoogte). Geen account, geen opslag, geen wachttijd.</p>
+<p>Dat geeft jou drie dingen tegelijk:</p>
+<ol>
+<li><strong>Een vroege waarschuwing in het oriëntatiegesprek.</strong> Als de klant met een specifieke woning komt die volgens de tool een 3 scoort, weet je dat hier een gesprek moet plaatsvinden over funderingsvoorbehoud, hogere reservering eigen geld, of een bouwtechnische keuring waar de fundering expliciet in zit. Bij een 8 of 9 kun je dat hele blok overslaan en focussen op de rest.</li>
+<li><strong>Een gespreksopener die geen advies is.</strong> Het cijfer is indicatief — dat staat letterlijk op de site — dus je geeft geen taxatie en geen bouwkundig oordeel. Je laat alleen zien wat publieke data zegt. Daarmee blijf je netjes binnen je adviesdomein, maar maak je het onderwerp wel concreet en bespreekbaar. "Even kijken wat het funderingscijfer zegt" is een stuk laagdrempeliger dan "ik adviseer een funderingsonderzoek."</li>
+<li><strong>Een onderbouwing voor het funderingsvoorbehoud.</strong> Bij een lage score heb je direct een verhaal richting de aankoopmakelaar of verkopend makelaar waarom een funderingsvoorbehoud in de bieding hoort. Niet "voor de zekerheid", maar "op basis van de bouwjaar-bodem-combinatie indiceert de risicokaart een verhoogd risico, dus we willen dit pre-contractueel afdekken."</li>
+</ol>
+
+<h2>Wat het Funderingscijfer voor de relaties van de adviseur doet</h2>
+<div class="two">
+<div>
+<h3>Voor de koper</h3>
+<ul>
+<li>Voorkomt de nachtmerrie-situatie van vastzitten aan een koop met een onfinancierbare fundering</li>
+<li>Geeft taal en grond om over funderingsrisico te beginnen op de bezichtiging</li>
+<li>Maakt de hoogte van het benodigde eigen geld voorspelbaarder (bij D/E reserveer je ruimte voor onderzoek én eventueel herstel)</li>
+</ul>
+</div>
+<div>
+<h3>Voor de verkoper / huiseigenaar</h3>
+<ul>
+<li>Inzicht vóór de verkoop, zodat je niet voor verrassingen komt te staan in het taxatierapport van de koper</li>
+<li>Mogelijkheid om proactief een QuickScan te laten doen en de uitkomst mee te nemen in vraagprijs en presentatie</li>
+<li>Verkleint het risico op een verborgen-gebrek-claim achteraf</li>
+</ul>
+</div>
+<div>
+<h3>Voor de bestaande klantportefeuille</h3>
+<ul>
+<li>Bij oversluitgesprekken of verbouwingsfinancieringen kun je het risico actief inventariseren — relevant voor woningen van vóór 1970 op slappe bodems (Holland, Utrecht, delen van Friesland en Groningen)</li>
+<li>Aanleiding voor een servicegesprek: "We hebben uw funderingsrisico opnieuw bekeken volgens de nieuwe norm — wilt u weten wat dit betekent?"</li>
+<li>Onderscheidend t.o.v. adviseurs die wachten tot de klant zelf belt</li>
+</ul>
+</div>
+<div>
+<h3>Voor de samenwerking met makelaars en taxateurs</h3>
+<ul>
+<li>Eén gemeenschappelijke, neutrale eerste indicatie waar iedereen mee uit de voeten kan</li>
+<li>Voorkomt dat jij als hypotheekadviseur "het slechte nieuws" moet brengen ná de koopakte — dat gesprek heeft de makelaar dan al gehad</li>
+</ul>
+</div>
+</div>
+
+<h2>De positionering die je als adviseur kunt kiezen</h2>
+<p>Funderingscijfer is geen vervanging van het officiële funderingsrisicorapport in de taxatie en al helemaal geen QuickScan. Het is wat het zegt: een indicatieve voorinschatting uit publieke bronnen. Daarin schuilt juist de kracht — je kunt het inzetten zonder verantwoordelijkheid te nemen voor de uitkomst, en wijst bij een lage score netjes door naar de juiste vervolgstap (QuickScan, lokaal funderingsloket, of in het taxatieproces zelf).</p>
+<p>In de kern verandert je rol hierdoor van reagerend (afwachten wat de taxateur zegt) naar agenderend (het onderwerp pakken voordat de klant in de problemen komt). Voor de klant is dat het verschil tussen een adviseur die formulieren invult en een adviseur die meedenkt.</p>
+
+<p><a class="cta" href="oproep.html">Lees ook de oproep →</a></p>
+</article></main>
+<footer>Funderingscijfer.nl — indicatief, geen vervanging van taxatie of funderingsonderzoek.</footer>
+</body>
+</html>

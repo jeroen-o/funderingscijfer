@@ -183,6 +183,37 @@ body{font-family:'Outfit',sans-serif;background:var(--sand);color:var(--ink);fon
 </style>
 </head>
 <body>
+<!-- fc-nav -->
+<style>
+.fcnav{background:#00243f;font-family:'Outfit','Segoe UI',Arial,sans-serif;position:relative;z-index:50}
+.fcnav-in{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap}
+.fcnav-brand{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:18px;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-right:auto}
+.fcnav-brand span{color:#E5A138}
+.fcnav-links{display:flex;flex-wrap:wrap;gap:2px 4px;list-style:none;margin:0;padding:0}
+.fcnav-links a{display:block;padding:6px 9px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none}
+.fcnav-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+.fcnav-links a[aria-current=page]{color:#E5A138}
+.fcnav-links .ext a{color:rgba(255,255,255,.45)}
+.fcnav-links .sep{width:1px;background:rgba(255,255,255,.15);margin:4px 6px}
+@media(max-width:640px){.fcnav-brand{width:100%}.fcnav-links .sep{display:none}}
+@media print{.fcnav{display:none}}
+</style>
+<nav class="fcnav" aria-label="Hoofdmenu"><div class="fcnav-in">
+<a class="fcnav-brand" href="index.html">Funderingscijfer<span>.</span>nl</a>
+<ul class="fcnav-links">
+<li><a href="index.html" aria-current="page">Home</a></li>
+<li><a href="over.html">Over</a></li>
+<li><a href="oproep.html">Oproep</a></li>
+<li><a href="opinie.html">Opinie</a></li>
+<li><a href="nvm-standpunt.html">NVM standpunt</a></li>
+<li class="sep" aria-hidden="true"></li>
+<li class="ext"><a href="https://www.woningcijfer.nl" target="_blank" rel="noopener">Woningcijfer</a></li>
+<li class="ext"><a href="https://www.klimaatcijfer.nl" target="_blank" rel="noopener">Klimaatcijfer</a></li>
+<li class="ext"><a href="https://www.pensioencijfer.nl" target="_blank" rel="noopener">Pensioencijfer</a></li>
+<li class="ext"><a href="https://www.hypotheekcijfer.nl" target="_blank" rel="noopener">Hypotheekcijfer</a></li>
+</ul></div></nav>
+<!-- /fc-nav -->
+
 <div class="hero">
   <div class="hero-in">
     <div class="brand"><span class="bn">Funderingscijfer</span><span class="bd">.</span><span class="bt">nl</span></div>
